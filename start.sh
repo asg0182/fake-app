@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
+set -e
+
 log=log-$(date +"%Y-%m-%d")
 
-source ./venv/bin/activate
-
-nohup flask run >> ./logs/$log &2>1 &
+cd /home/programfid/app; nohup ./run.sh >> ./logs/$log &2>1 &
